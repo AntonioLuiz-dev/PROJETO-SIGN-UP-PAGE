@@ -1,0 +1,223 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+/* FUNDO */
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background 0.4s ease;
+}
+
+/* CONTAINER */
+.container {
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* CARD */
+.card {
+    width: 100%;
+    max-width: 420px;
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 32px 28px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    color: #fff;
+    animation: fadeUp 0.8s ease;
+}
+
+/* ANIMAÇÃO */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* IMAGEM */
+.image-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 16px;
+}
+
+.image-container img {
+    width: 80px;
+    height: 80px;
+    padding: 16px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* TEMA */
+.theme-toggle {
+    background: none;
+    border: none;
+    font-size: 1.3rem;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto 10px;
+    color: #fff;
+    transition: transform 0.2s ease;
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* TEXTO */
+.card h1 {
+    text-align: center;
+    font-size: 1.8rem;
+}
+
+.card p {
+    text-align: center;
+    font-size: 0.95rem;
+    opacity: 0.85;
+    margin-bottom: 24px;
+}
+
+/* FORM */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.input-group input {
+    padding: 12px 14px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    font-size: 0.95rem;
+    transition: border 0.3s ease, transform 0.2s ease;
+}
+
+.input-group input:focus {
+    transform: scale(1.01);
+}
+
+/* VALIDAÇÃO VISUAL */
+.input-group.success input {
+    border-color: #22c55e;
+}
+
+.input-group.error input {
+    border-color: #ef4444;
+}
+
+.error-text {
+    font-size: 0.75rem;
+    color: #fecaca;
+    min-height: 14px;
+}
+
+/* PASSWORD */
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 45px;
+}
+
+.password-wrapper button {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* BOTÃO */
+button[type="submit"] {
+    margin-top: 10px;
+    padding: 14px;
+    border-radius: 12px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    background: #fff;
+    color: #6366f1;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button[type="submit"]:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* LOADING */
+button.loading {
+    pointer-events: none;
+    opacity: 0.8;
+}
+
+button.loading::after {
+    content: "";
+    width: 18px;
+    height: 18px;
+    border: 3px solid #6366f1;
+    border-top-color: transparent;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 10px;
+    animation: spin 0.6s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* LOGIN */
+.login-link {
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.login-link a {
+    color: #fff;
+    font-weight: 600;
+}
+
+/* LIGHT MODE */
+body.light {
+    background: linear-gradient(135deg, #e5e7eb, #f9fafb);
+}
+
+body.light .card {
+    background: #fff;
+    color: #111;
+}
+
+body.light .login-link a {
+    color: #6366f1;
+}

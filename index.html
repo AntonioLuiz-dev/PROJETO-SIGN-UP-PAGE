@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Signup | Antonio Luiz</title>
+  <link rel="icon" href="./assets/favicon.ico" type="image/x-icon">
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/favicon-16x16.png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <main class="container">
+    <section class="card">
+
+      <div class="image-container">
+        <img src="./assets/signup.png" alt="Ilustração de login" />
+      </div>
+
+      <button class="theme-toggle" id="theme-toggle">🌙</button>
+
+      <h1>Criar conta</h1>
+      <p>Comece sua jornada conosco 🚀</p>
+
+      <form id="signup-form" novalidate>
+
+        <div class="input-group">
+          <label for="name">Nome</label>
+          <input type="text" id="name" placeholder="Seu nome completo" />
+          <small class="error-text"></small>
+        </div>
+
+        <div class="input-group">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" placeholder="seu@email.com" />
+          <small class="error-text"></small>
+        </div>
+
+        <div class="input-group password-group">
+          <label for="password">Senha</label>
+
+          <div class="password-wrapper">
+            <input type="password" id="password" placeholder="••••••••" />
+            <button type="button" id="toggle-password">👁️</button>
+          </div>
+          <small class="error-text"></small>
+        </div>
+
+        <button type="submit">Criar conta</button>
+
+        <span class="login-link">
+          Já tem uma conta? <a href="#">Entrar</a>
+        </span>
+      </form>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
