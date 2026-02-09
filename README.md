@@ -9,7 +9,7 @@ Este projeto foi criado com o objetivo de demonstrar domínio de fundamentos do 
 ---
 
 ## 📸 Preview
-![Preview do projeto](./assets/preview.png)
+<img src="https://github.com/AntonioLuiz-dev/CALCULADORA/blob/main/assets/mockup.png?raw=true" width="510px"/>
 
 ---
 
